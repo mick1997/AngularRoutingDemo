@@ -1,0 +1,18 @@
+<h1>Employee Table</h1>
+<table border="2" *ngIf="show">
+  <thead>
+    <th>EmployeeId</th>
+    <th>EmployeeName</th>
+    <th>Department</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let e of employee">
+      <td>{{e.personId}}</td>
+      <td>{{e.personName}}</td>
+      <td>{{e.dept}}</td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<button (click)="show=!show">{{show ? 'Hide Employee': 'Show Employee'}}</button>
+
