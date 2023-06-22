@@ -10,6 +10,10 @@ import { ProfileComponent } from './profile/profile.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { ProductComponent } from './product/product.component';
 import { EmployeeComponent } from './employee/employee.component';
+import { ProductDetailsComponent } from './product-details/product-details.component';
+import { ProductOverviewComponent } from './product-overview/product-overview.component';
+import { ProductSpecComponent } from './product-spec/product-spec.component';
+import { ProductService } from './product.service';
 
 @NgModule({
   declarations: [
@@ -20,13 +24,16 @@ import { EmployeeComponent } from './employee/employee.component';
     ProfileComponent,
     NotfoundComponent,
     ProductComponent,
-    EmployeeComponent
+    EmployeeComponent,
+    ProductDetailsComponent,
+    ProductOverviewComponent,
+    ProductSpecComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
