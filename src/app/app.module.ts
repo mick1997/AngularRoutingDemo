@@ -14,6 +14,9 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
 import { ProductOverviewComponent } from './product-overview/product-overview.component';
 import { ProductSpecComponent } from './product-spec/product-spec.component';
 import { ProductService } from './product.service';
+import { FormsDemoComponent } from './forms-demo/forms-demo.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormValidationComponent } from './form-validation/form-validation.component';
 
 @NgModule({
   declarations: [
@@ -27,11 +30,15 @@ import { ProductService } from './product.service';
     EmployeeComponent,
     ProductDetailsComponent,
     ProductOverviewComponent,
-    ProductSpecComponent
+    ProductSpecComponent,
+    FormsDemoComponent,
+    FormValidationComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [ProductService],
   bootstrap: [AppComponent]
