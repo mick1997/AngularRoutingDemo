@@ -1,0 +1,23 @@
+mat-card-title {
+  color: green;
+}
+
+mat-card {
+  text-align: justify;
+  border: 2px solid black;
+  width: 355px;
+  padding: 5px;
+}
+
+mat-list {
+  background-color: green;
+}
+
+mat-action-list {
+  background-color: magenta;
+}
+
+mat-selection-list {
+  background-color: peru;
+}
+

@@ -1,18 +1,181 @@
 <div class="container">
-    <nav class="navbar navbar-default">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <a class="navbar-brand" href="#"><strong>{{ title }}</strong> Demo</a>
-        </div>
-        <ul class="nav navbar-nav">
-          <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
-          <li><a routerLink="/product" routerLinkActive="active">Product</a></li>
-          <li><a routerLink="/contact" routerLinkActive="active">Contact us</a></li>
-          <li><a routerLink="/about" routerLinkActive="active">About us</a></li>
-        </ul>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#"
+          ><strong>{{ title }}</strong> Demo</a
+        >
       </div>
-    </nav>
+      <ul class="nav navbar-nav">
+        <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
+        <li><a routerLink="/product" routerLinkActive="active">Product</a></li>
+        <li>
+          <a routerLink="/contact" routerLinkActive="active">Contact us</a>
+        </li>
+        <li><a routerLink="/about" routerLinkActive="active">About us</a></li>
+      </ul>
+    </div>
+  </nav>
+</div>
+<router-outlet></router-outlet>
+<!-- <app-forms-demo></app-forms-demo>
+<app-form-validation></app-form-validation> -->
+
+<!-- <h1>Angular Material Icons Demo</h1>
+<mat-icon> book </mat-icon>
+<span>Book Icon</span>
+<br />
+<mat-icon> backup </mat-icon>
+<span>Backup Icon</span>
+<br />
+<mat-icon> calendar_today </mat-icon>
+<span>Calendar Icon</span>
+<br />
+<mat-icon> card_giftcard </mat-icon>
+<span>GiftCard Icon</span>
+<br />
+<mat-icon> copyright </mat-icon>
+<span>Copyright Icon</span>
+<br />
+<mat-icon> done </mat-icon>
+<span>Done Icon</span>
+<br />
+<mat-icon> extension </mat-icon>
+<span>Extension Icon</span>
+<br />
+<mat-icon> favorite </mat-icon>
+<span>Favorite Icon</span>
+<br />
+<mat-icon> g_translate </mat-icon>
+<span>Google Translate Icon</span>
+<br />
+<mat-icon> history </mat-icon>
+<span>History Icon</span>
+<br />
+<mat-icon> home </mat-icon>
+<span>Home Icon</span>
+<br />
+<mat-icon> bar_chart </mat-icon>
+<span>Chart Icon</span>
+<br />
+
+<h1>Angular Card Demo</h1>
+<mat-card>
+  <mat-card-header>
+    <mat-card-title> Angular Material Mat Card Demo </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <p>
+      This article describes the Angular Material Installation process in
+      detail.
+    </p>
+  </mat-card-content>
+</mat-card>
+
+<div>
+  <h1>Angular Material Menu</h1>
+  <button mat-button [matMenuTriggerFor]="menu1">UI Technology</button>
+  <mat-menu #menu1="matMenu">
+    <button mat-menu-item>Material UI</button>
+    <button mat-menu-item>HTML</button>
+    <button mat-menu-item>Bootstrap</button>
+  </mat-menu>
+
+  <button mat-button [matMenuTriggerFor]="menu2">Backend Technology</button>
+  <mat-menu #menu2="matMenu">
+    <button mat-menu-item>Java</button>
+    <button mat-menu-item>Spring Boot</button>
+    <button mat-menu-item>Hibernate</button>
+  </mat-menu>
+</div>
+
+<div>
+  <h1>Angular Material DatePicker Demo</h1>
+  <mat-form-field appearance="fill">
+    <mat-label>Choose a date:</mat-label>
+    <input matInput [matDatepicker]="picker">
+    <mat-hint>MM/DD/YYYY</mat-hint>
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+  <br>
+  <h2>Angular Date Picker Range Selection</h2>
+  <mat-form-field appearance="fill">
+    <mat-label>Enter a Date Range:</mat-label>
+    <mat-date-range-input [rangePicker]="picker1">
+      <input matStartDate placeholder="Start date">
+      <input matEndDate placeholder="End date">
+    </mat-date-range-input>
+    <mat-hint>MM/DD/YYYY-MM/DD/YYYY</mat-hint>
+    <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+    <mat-date-range-picker #picker1></mat-date-range-picker>
+  </mat-form-field>
+</div>
+
+<div>
+  <div style="text-align: center;">
+    <h1 style="color: green">Angular Material List</h1>
   </div>
-  <router-outlet></router-outlet>
-  <!-- <app-forms-demo></app-forms-demo> -->
-  <app-form-validation></app-form-validation>
+  <h3>Simple List</h3>
+  <mat-list>
+    <mat-list-item>Angular</mat-list-item>
+    <mat-list-item>Vue</mat-list-item>
+    <mat-list-item>React</mat-list-item>
+  </mat-list>
+  <h3>Action List</h3>
+  <mat-action-list>
+    <button mat-list-item (click)="save()">Save</button>
+    <button mat-list-item (click)="undo()">Undo</button>
+  </mat-action-list>
+  <h3>Selection List</h3>
+  <mat-selection-list #css>
+    <mat-list-option *ngFor="let type of typesOfCSS">{{type}}</mat-list-option>
+  </mat-selection-list>
+  <br>
+  <p>Options Selected: {{css.selectedOptions.selected.length}}</p>
+</div> -->
+
+<h3>Employee Form</h3>
+<form class="formwidth" (ngSubmit)="onSubmit()" #myForm="ngForm">
+    <table class="fullwidth" cellspacing="0">
+        <tr>
+            <td>
+                <mat-form-field class="fullwidth">
+                    <input matInput placeholder="please enter First Name" id="firstname" [(ngModel)]="employee.firstName" name="firstName">
+                </mat-form-field>
+            </td>
+            <td>
+                <mat-form-field class="fullwidth">
+                    <input matInput placeholder="please enter Last Name" id="lastname" [(ngModel)]="employee.lastName" name="lastName">
+                </mat-form-field>
+            </td>
+        </tr>
+    </table>
+    <p>
+        <mat-form-field class="fullwidth">
+            <textarea matInput placeholder="please enter Address" id="address" [(ngModel)]="employee.address" name="address"></textarea>
+        </mat-form-field>
+    </p>
+    <table class="fullwidth" cellspacing="0">
+        <tr>
+            <td>
+                <mat-form-field class="fullwidth">
+                    <input matInput placeholder="Please enter age" id="age" [(ngModel)]="employee.age" name="age">
+                </mat-form-field>
+            </td>
+            <td>
+                <mat-form-field class="fullwidth">
+                    <input matInput placeholder="Please enter email" id="email" [(ngModel)]="employee.email" name="email">
+                </mat-form-field>
+            </td>
+            <td>
+                <mat-form-field class="fullwidth">
+                    <input matInput placeholder="Please enter department" id="department" [(ngModel)]="employee.dept" name="department">
+                </mat-form-field>
+            </td>
+        </tr>
+    </table>
+    <p>
+        <button type="submit" md-raised-button>Submit</button>
+    </p>
+</form>

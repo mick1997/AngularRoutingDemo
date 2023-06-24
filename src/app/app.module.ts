@@ -17,6 +17,16 @@ import { ProductService } from './product.service';
 import { FormsDemoComponent } from './forms-demo/forms-demo.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FormValidationComponent } from './form-validation/form-validation.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
+import { MatIconModule } from '@angular/material/icon';
+import { MatCardModule} from '@angular/material/card';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatInputModule } from '@angular/material/input';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatFormFieldModule} from '@angular/material/form-field';
+import { MatListModule } from '@angular/material/list';
 
 @NgModule({
   declarations: [
@@ -38,7 +48,17 @@ import { FormValidationComponent } from './form-validation/form-validation.compo
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatIconModule,
+    HttpClientModule,
+    MatCardModule,
+    MatMenuModule,
+    MatDatepickerModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatNativeDateModule,
+    MatListModule
   ],
   providers: [ProductService],
   bootstrap: [AppComponent]

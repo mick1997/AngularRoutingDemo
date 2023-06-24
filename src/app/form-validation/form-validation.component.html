@@ -5,14 +5,14 @@
   <div *ngIf="myForm.get('name')?.invalid && (myForm.get('name')?.dirty || myForm.get('name')?.touched)">
     <div *ngIf="myForm.get('name')?.errors?.['required']">Name is required.</div>
   </div>
-
+  <br>
   <label for="email">Email: </label>
   <input type="email" id="email" formControlName="email">
   <div *ngIf="myForm.get('email')?.invalid && (myForm.get('email')?.dirty || myForm.get('email')?.touched)">
     <div *ngIf="myForm.get('email')?.errors?.['required']">Email is required.</div>
     <div *ngIf="myForm.get('email')?.errors?.['email']">Invalid email format.</div>
   </div>
-
+  <br>
   <label for="message">Message: </label>
   <textarea type="message" formControlName="message"></textarea>
   <div *ngIf="myForm.get('message')?.invalid && (myForm.get('message')?.dirty || myForm.get('message')?.touched)">
